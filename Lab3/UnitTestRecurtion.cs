@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-//Описати рекурсивну функцію множення двох чисел, використовуючи лише операцію додавання. 
+//Описати рекурсивну функцію множення двох чисел, 
+//використовуючи лише операцію додавання. 
 namespace Lab3
 {
     [TestClass]

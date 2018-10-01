@@ -2,13 +2,16 @@
 
 namespace Lab1Logic
 {
-    public static class QuickSortLogic
+    public class QuickSortLogic
     {
-        public static void MyQuickSort(int[] a)
+        public int SwapCount = 0;
+        public int ComparisonCount = 0;
+
+        public void MyQuickSort(int[] a)
         {
             Sort(a, 0, a.Length - 1);
         }
-        static void Sort(int[] a, int i, int j)
+        void Sort(int[] a, int i, int j)
         {
             if (i < j)
             {
@@ -17,13 +20,20 @@ namespace Lab1Logic
                 Sort(a, q + 1, j);
             }
         }
-        static int SortPart(int[] a, int i, int j)
+
+        bool CompareLessOrEqual(int a, int b)
+        {
+            ComparisonCount++;
+            return a <= b;
+        }
+
+        int SortPart(int[] a, int i, int j)
         {
             int x = a[j];
             int minValue = i - 1;
             for (int k = i; k < j; k++)
             {
-                if (a[k] <= x)
+                if (CompareLessOrEqual(a[k], x))
                 {
                     minValue++;
                     Swap(a, k, minValue);
@@ -32,11 +42,13 @@ namespace Lab1Logic
             Swap(a, j, minValue + 1);
             return minValue + 1;
         }
-        static void Swap(int[] a, int k, int minValue)
+        void Swap(int[] a, int k, int minValue)
         {
             int temp = a[k];
             a[k] = a[minValue];
             a[minValue] = temp;
+
+            SwapCount++;
         }
     }
 }

@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using Lab2Logic;
 using System.Threading.Tasks;
 
 namespace ConsoleLab2
@@ -10,12 +10,17 @@ namespace ConsoleLab2
     {
         static void Main(string[] args)
         {
-            // The code provided will print ‘Hello World’ to the console.
-            // Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app.
-            Console.WriteLine("Hello World!");
-            Console.ReadKey();
+            var random = new Random(0);
+            int[] source = Enumerable.Range(1, 10).Select(_ => random.Next(10)).ToArray();
 
-            // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
+            string sourceArrayString = string.Join(" ", source);
+            Console.WriteLine("Unsorted array : " + sourceArrayString);
+            Console.ReadLine();
+
+            InsertionSortLogic.Sort(source);
+            string sortedArrayString = string.Join(" ", source);
+            Console.WriteLine("Sorted array : " + sortedArrayString);
+            Console.ReadKey();
         }
     }
 }

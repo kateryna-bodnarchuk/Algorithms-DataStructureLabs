@@ -11,7 +11,7 @@ namespace Lab2Logic
             a[j] = temp;
         }
 
-        private static void Sort(int[] a)
+        public static void Sort(int[] a)
         {
             for (int i = 0; i < a.Length - 1; i++)
             {
