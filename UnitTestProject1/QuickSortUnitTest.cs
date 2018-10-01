@@ -17,7 +17,8 @@ namespace Lab1
             {
                 var source = Enumerable.Range(1, 10).Select(_ => random.Next(10)).ToArray();
                 var a = source.ToArray();
-                QuickSortLogic.MyQuickSort(a);
+                var sort = new QuickSortLogic();
+                sort.MyQuickSort(a);
                 var b = source.ToList();
                 b.Sort();
                 Assert.IsTrue(a.SequenceEqual(b));

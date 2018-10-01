@@ -3,8 +3,16 @@ using System.Linq;
 using System.Collections.Generic;
 using Lab1Logic;
 
-namespace ConsoleApp1
+namespace Lab1Console
 {
+    ///<summary>
+    ///Написати програму, яка виконує наступні дії:
+    ///заповнює масив випадковими числами;виводить несортований масив на екран;  
+    ///виконує QuickSort із підрахунком кількості операцій порівняння і перестановок; 
+    ///виводить на екран кількість порівнянь та перестановок;
+    ///виводить на екран сортований масив. 
+    ///</summary>
+
     class Program
     {
         static void Main(string[] args)

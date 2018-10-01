@@ -2,23 +2,26 @@
 
 namespace Lab2Logic
 {
-    public static class InsertionSortLogic
+    public class InsertionSortLogic
     {
-        static void Swap(int[] a, int i, int j)
+        public int SwapCount = 0;
+        public int ComparisonCount = 0;
+
+        void Swap(int[] a, int i, int j)
         {
             int temp = a[i];
             a[i] = a[j];
             a[j] = temp;
+            SwapCount++;
         }
-
-        public static void Sort(int[] a)
+        public void Sort(int[] a)
         {
             for (int i = 0; i < a.Length - 1; i++)
             {
                 int minIndex = i;
                 for (int j = i; j < a.Length; j++)
                 {
-                    if (a[j] < a[minIndex])
+                    if (CompareLess(a[j], a[minIndex]))
                     {
                         minIndex = j;
                     }
@@ -28,6 +31,11 @@ namespace Lab2Logic
                     Swap(a, i, minIndex);
                 }
             }
+        }
+        bool CompareLess(int a, int b)
+        {
+            ComparisonCount++;
+            return a < b;
         }
     }
 }

@@ -17,7 +17,8 @@ namespace Lab2
             {
                 var source = Enumerable.Range(1, 10).Select(_ => random.Next(10)).ToArray();
                 var a = source.ToArray();
-                InsertionSortLogic.Sort(a);
+                var sort = new InsertionSortLogic();
+                sort.Sort(a);
                 var b = source.ToList();
                 b.Sort();
                 Assert.IsTrue(a.SequenceEqual(b));

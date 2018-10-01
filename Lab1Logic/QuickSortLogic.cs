@@ -47,7 +47,6 @@ namespace Lab1Logic
             int temp = a[k];
             a[k] = a[minValue];
             a[minValue] = temp;
-
             SwapCount++;
         }
     }

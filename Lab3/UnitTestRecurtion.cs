@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-//Описати рекурсивну функцію множення двох чисел, 
-//використовуючи лише операцію додавання. 
 namespace Lab3
 {
+    ///<summary>
+    //Описати рекурсивну функцію множення двох чисел, використовуючи лише операцію додавання.
+    ///</summary>
+
     [TestClass]
     public class UnitTestRecurtion
     {
