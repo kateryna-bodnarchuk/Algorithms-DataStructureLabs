@@ -1,4 +1,4 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -6,10 +6,14 @@ using System.Linq;
 
 namespace Lab6.UnitTest
 {
+    /// <summary>
+    /// Програма зчитує початковий граф з файлу у вигляді списку зв'язків. Перевіряє граф на зв'язність
+    /// </summary>
     [TestClass]
     public class UnitTest1
     {
-        static SortedDictionary<int, SortedSet<int>> PointPartsCollectionToMap(IEnumerable<(int a, int b)> collection)
+        static SortedDictionary<int, SortedSet<int>> PointPartsCollectionToMap(
+            IEnumerable<(int a, int b)> collection)
         {
             var result = new SortedDictionary<int, SortedSet<int>>();
 
@@ -79,7 +83,6 @@ namespace Lab6.UnitTest
                     return false;
                 }
             }
-
 
             return true;
         }
